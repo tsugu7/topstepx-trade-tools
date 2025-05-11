@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ページタイトル表示 - 設定</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #4285f4;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      font-family: monospace;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    #urlPatternHelp {
+      font-size: 14px;
+      color: #666;
+      margin-top: 8px;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    #status {
+      margin-top: 16px;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <h1>ページタイトル表示 - 設定</h1>
+  
+  <div class="form-group">
+    <label for="urlPatterns">対象URLパターン:</label>
+    <textarea id="urlPatterns" placeholder="https://example.com/*&#10;https://*.example.org/*&#10;*://*.example.net/*"></textarea>
+    <div id="urlPatternHelp">
+      <p>複数のURLパターンを入力する場合は、1行に1つずつ入力してください。</p>
+      <p>ワイルドカード(*)を使用できます。例：</p>
+      <ul>
+        <li><code>https://example.com/*</code> - example.comのすべてのページ</li>
+        <li><code>https://*.example.org/*</code> - example.orgとそのサブドメインのすべてのページ</li>
+        <li><code>*://*.example.net/*</code> - httpとhttps両方のexample.netとそのサブドメイン</li>
+      </ul>
+      <p>空にすると、すべてのURLで拡張機能が動作します。</p>
+    </div>
+  </div>
+  
+  <button id="save">保存</button>
+  <div id="status"></div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

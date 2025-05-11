@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      padding: 10px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #pageTitle {
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 8px;
+      margin-top: 10px;
+      word-break: break-all;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    button {
+      margin-top: 10px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover:not([disabled]) {
+      background-color: #3367d6;
+    }
+    button[disabled] {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    .footer {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .settings-link {
+      font-size: 12px;
+      color: #666;
+      text-decoration: none;
+      cursor: pointer;
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 3px 8px;
+    }
+    .settings-link:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+  <title>ページタイトル表示</title>
+</head>
+<body>
+  <h2>現在のページタイトル</h2>
+  <div id="pageTitle">読み込み中...</div>
+  <button id="copyButton">コピー</button>
+  
+  <div class="footer">
+    <button class="settings-link" id="openSettings">設定</button>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
